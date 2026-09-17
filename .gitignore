@@ -1,5 +1,9 @@
+# Python cache
 __pycache__/
-*.py[cod]
+*.pyc
+# Virtual environment
 .venv/
+# Editor settings
 .vscode/
+# Local secrets
 .env
