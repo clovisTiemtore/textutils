@@ -11,7 +11,10 @@ A lightweight Python library for common text-processing operations.
 ## Usage
 ```python
 from textutils import word_count
-print(word_count("Hello World!"))```
+
+count = word_count("Hello Open Source!")
+print(count)
+```
 
 ## Contributing
 Contributions are welcome!
