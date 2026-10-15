@@ -1,5 +1,6 @@
-import string
+"""Count normalized words while filtering common stop words."""
 
+import string
 
 _STOP_WORDS = {"the", "and", "a", "to"}
 
@@ -84,9 +85,6 @@ def word_frequency(text: str) -> dict[str, int]:
     filtered_words: list[str] = []
 
     for word in individual_words:
-        if not word:
-            continue
-
         if word in _STOP_WORDS:
             continue
 

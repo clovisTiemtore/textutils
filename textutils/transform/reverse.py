@@ -1,3 +1,6 @@
+"""Reverse a text string."""
+
+
 def reverse(text: str) -> str:
     """Reverse a given text.
 
@@ -12,4 +15,3 @@ def reverse(text: str) -> str:
         The reversed text.
     """
     return text[::-1]
-

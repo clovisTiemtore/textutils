@@ -1,3 +1,6 @@
+"""Convert whitespace-separated text to snake case."""
+
+
 def snake_case(text: str) -> str:
     """Convert a given text to snake case.
 

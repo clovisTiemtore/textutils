@@ -9,6 +9,7 @@ A lightweight Python library for common text-processing operations.
 - `reverse(text)`: Reverse the characters in a text.
 - `capitalize_words(text)`: Capitalize the first letter of each word.
 - `snake_case(text)`: Convert a text to snake case.
+- `word_frequency(text)`: Count words after punctuation and stop-word filtering.
 
 ## Usage
 ```python
@@ -19,7 +20,17 @@ print(count)
 ```
 
 ## Contributing
-Contributions are welcome!
+Contributions are welcome! Install the development tools and run the checks with:
+
+```bash
+python -m pip install pytest pytest-cov black ruff
+pytest
+black --check .
+ruff check .
+```
+
+Pytest reports line and branch coverage for the `textutils` package. Tool settings
+are maintained in [`pyproject.toml`](pyproject.toml).
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.

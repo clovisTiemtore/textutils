@@ -1,3 +1,6 @@
+"""Capitalize the words in a text string."""
+
+
 def capitalize_words(text: str) -> str:
     """Capitalize each word in a given text.
 

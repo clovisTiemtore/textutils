@@ -1,3 +1,6 @@
+"""Count characters in a text string."""
+
+
 def character_count(text: str, include_spaces: bool = True) -> int:
     """Count the number of characters in a given text.
 
