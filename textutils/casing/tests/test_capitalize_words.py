@@ -46,3 +46,7 @@ def test_public_api_exports_all_operations() -> None:
     assert callable(snake_case)
     assert callable(word_count)
     assert callable(word_frequency)
+
+
+def test_intentional_failure():
+    raise AssertionError("Ceci est un échec intentionnel pour tester la CI")
