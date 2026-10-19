@@ -1,11 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "textutils"
+version = "0.0.0"
+description = "An open-source Python library for common text-processing operations."
+readme = "README.md"
+requires-python = ">=3.12"
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov", "black", "ruff"]
+
+[tool.setuptools.packages.find]
+include = ["textutils*"]
+namespaces = false
+
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+testpaths = ["textutils"]
 addopts = ["--cov=textutils", "--cov-report=term-missing"]
 
 [tool.coverage.run]
 branch = true
 core = "pytrace"
 source = ["textutils"]
+omit = ["textutils/**/tests/*"]
 
 [tool.coverage.report]
 show_missing = true
@@ -25,4 +44,4 @@ select = ["E", "F", "I", "B", "D"]
 convention = "numpy"
 
 [tool.ruff.lint.per-file-ignores]
-"tests/**/*.py" = ["D"]
+"**/tests/**/*.py" = ["D"]
