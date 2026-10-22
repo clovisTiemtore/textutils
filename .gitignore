@@ -11,4 +11,7 @@ htmlcov/
 .vscode/
 # Local secrets
 .env
+# Distribution / Build
 *.egg-info/
+dist/
+build/
