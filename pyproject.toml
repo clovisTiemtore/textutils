@@ -1,13 +1,28 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77.0.3"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "textutils"
-version = "0.0.0"
+name = "textutils-clovistiemtore"
+version = "0.1.0"
 description = "An open-source Python library for common text-processing operations."
 readme = "README.md"
 requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["text", "utilities", "text-processing"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.urls]
+Homepage = "https://github.com/clovisTiemtore/textutils"
+Repository = "https://github.com/clovisTiemtore/textutils"
+Issues = "https://github.com/clovisTiemtore/textutils/issues"
 
 [project.optional-dependencies]
 dev = ["pytest", "pytest-cov", "black", "ruff"]
