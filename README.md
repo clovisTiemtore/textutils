@@ -1,49 +1,74 @@
 # textutils
 
-A lightweight Python library for common text-processing operations.
+A lightweight Python library providing simple utilities for common
+text-processing operations.
+
+Requires Python 3.12 or later.
 
 ## Features
 
 - `word_count(text)`: Count the number of words in a text.
-- `character_count(text, include_spaces=True)`: Count characters with optional space inclusion.
+- `character_count(text, include_spaces=True)`: Count characters, optionally
+  excluding spaces.
 - `reverse(text)`: Reverse the characters in a text.
-- `capitalize_words(text)`: Capitalize the first letter of each word.
-- `snake_case(text)`: Convert a text to snake case.
-- `word_frequency(text)`: Count words after punctuation and stop-word filtering.
+- `capitalize_words(text)`: Capitalize each word in a text.
+- `snake_case(text)`: Convert whitespace-separated words to snake case.
+- `word_frequency(text)`: Count normalized words after punctuation and common
+  stop-word filtering.
 
 ## Installation
 
-Create and activate a virtual environment, then install the package:
+The first release is being prepared. Once it is published, install the package
+from PyPI with:
 
-```bash
-python3.12 -m venv .venv
-source .venv/bin/activate
-python -m pip install .
+```console
+python -m pip install textutils-clovistiemtore
 ```
 
-To install it in editable mode with the development and testing tools:
+To install the project locally in editable mode with its development tools:
 
-```bash
+```console
 python -m pip install -e ".[dev]"
+python -m pip install pre-commit
 ```
 
 ## Usage
 
 ```python
-from textutils import word_count
+from textutils import (
+    capitalize_words,
+    character_count,
+    reverse,
+    snake_case,
+    word_count,
+    word_frequency,
+)
 
-count = word_count("Hello Open Source!")
-print(count)
+print(word_count("Hello Open Source!"))
+print(character_count("Hello Open Source!", include_spaces=False))
+print(reverse("Hello Open Source!"))
+print(capitalize_words("hello open source!"))
+print(snake_case("Hello Open Source!"))
+print(word_frequency("Python is great. Python is simple."))
 ```
 
 ## Testing
 
-Run the test suite and display line and branch coverage with:
+Run the test suite with line and branch coverage:
 
-```bash
+```console
 python -m pytest
+```
+
+Run the formatting, lint, and pre-commit checks:
+
+```console
+python -m black --check .
+python -m ruff check .
+pre-commit run --all-files
 ```
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE)
+file for more details.
